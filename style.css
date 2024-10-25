@@ -1,7 +1,5 @@
-
-
 body {
-    font-family: 'Poppins', sans-serif; /* cambio a Poppins para el cuerpo */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
@@ -12,12 +10,13 @@ body {
 header {
     background-color: #f8f8f8;
     padding: 1rem;
-    text-align: center;  /* centrar el contenido */
+    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 header nav {
-    display: inline-block; /* el  menú ocupe el espacio necesario */
+    display: inline-block;
 }
 
 header nav a {
@@ -34,9 +33,9 @@ header nav a:hover {
 }
 
 .louvro-title {
-    font-size: 1.5rem; /* esta mas grande este */
-    font-weight: 700;  /* Negrita extra para mas atencion*/
-    color: #b57d6a;    /* Un color distinto para destacarlo */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #b57d6a;
 }
 
 /* Hero Section */
@@ -82,12 +81,12 @@ section {
 }
 
 h2 {
-    font-family: 'Playfair Display', serif; /* cambie a Playfair Display para los encabezados */
+    font-family: 'Playfair Display', serif;
     color: #b57d6a;
 }
 
 p {
-    font-family: 'Poppins', sans-serif; /* parrafos con Poppins */
+    font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     line-height: 1.6;
 }
@@ -120,12 +119,13 @@ p {
 .collection-item {
     width: 30%;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .collection-item img {
     width: 100%;
-    height: 250px; /* ajjustamiento de la altura para alinear las imágenes */
-    object-fit: cover; /* Recortar las imágenes para mantener la alineación */
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -188,42 +188,62 @@ footer a {
     color: white;
 }
 
+/* Estilos para menú de hamburguesa en móviles */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
 
+.menu-toggle.active ~ nav {
+    display: block;
+}
 
+/* Media Queries */
 @media (max-width: 768px) {
-    header nav a {
-        font-size: 1rem; /* Reducir tamaño del texto */
-        margin: 0 10px;  /* Reducir el margen entre enlaces */
+    .menu-toggle {
+        display: block;
     }
-    
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: #f8f8f8;
+        padding-top: 1rem;
+    }
+
+    header nav a {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
     .hero-section {
-        height: 50vh; /* Reducir altura para móviles */
+        height: 50vh;
     }
 
     .hero-section h1 {
-        font-size: 2rem; /* Ajustar tamaño del título */
+        font-size: 2rem;
     }
 
     .content-container {
-        flex-direction: column; /* Cambiar a columna para evitar que el contenido se vea comprimido */
+        flex-direction: column;
         text-align: center;
     }
 
     .text-content, .image-content img {
-        width: 100%; /* Asegurar que los elementos ocupen todo el ancho disponible */
-        max-width: none; /* Desactivar límite de ancho en imagen */
+        width: 100%;
+        max-width: none;
     }
 
     .collections-container .collection-item {
-        width: 100%; /* Mostrar cada colección en una línea */
-        margin-bottom: 20px;
+        width: 100%;
     }
-    
+
     form input {
-        font-size: 0.9rem; /* Reducir tamaño del texto de los inputs */
+        font-size: 0.9rem;
     }
 }
-
-
-
-
