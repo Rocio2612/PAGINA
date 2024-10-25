@@ -100,7 +100,7 @@ p {
 
 .image-content {
     width: 100%; /* Ajustamos al 100% para móviles */
-    text-align: center; /* Centrar la imagen */
+    text-align: center; /* Centrar la imagenes */
 }
 
 .image-content img {
@@ -210,7 +210,7 @@ footer a {
         width: 100%;
         margin-bottom: 20px;
     }
-
+   
     form input {
         font-size: 0.9rem;
     }
