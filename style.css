@@ -6,13 +6,11 @@ body {
     color: #333;
 }
 
-/* Header */
 header {
     background-color: #f8f8f8;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 header nav {
@@ -38,7 +36,6 @@ header nav a:hover {
     color: #b57d6a;
 }
 
-/* Hero Section */
 .hero-section {
     background-image: url('https://i.pinimg.com/736x/56/1e/3d/561e3d00e171d656cc11d1b707582761.jpg');
     background-size: cover;
@@ -68,7 +65,6 @@ header nav a:hover {
     font-size: 1.2rem;
 }
 
-/* Content Sections */
 section {
     margin-top: 50px;
     padding: 20px;
@@ -91,7 +87,6 @@ p {
     line-height: 1.6;
 }
 
-/* Alineación de imágenes y texto en las secciones */
 .content-container {
     display: flex;
     justify-content: space-between;
@@ -100,7 +95,12 @@ p {
 }
 
 .text-content {
-    width: 50%;
+    width: 100%; /* Cambiado a 100% para que ocupe todo el ancho */
+}
+
+.image-content {
+    width: 100%; /* Ajustamos al 100% para móviles */
+    text-align: center; /* Centrar la imagen */
 }
 
 .image-content img {
@@ -109,7 +109,6 @@ p {
     border-radius: 10px;
 }
 
-/* Colecciones */
 .collections-container {
     display: flex;
     justify-content: space-between;
@@ -119,7 +118,6 @@ p {
 .collection-item {
     width: 30%;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .collection-item img {
@@ -134,7 +132,6 @@ p {
     font-size: 1rem;
 }
 
-/* Formulario de contacto */
 form {
     display: flex;
     flex-direction: column;
@@ -161,12 +158,10 @@ form input[type="submit"]:hover {
     background-color: #9d6554;
 }
 
-/* Centrado del título "Contacto" */
 .centered-title {
     text-align: center;
 }
 
-/* Footer */
 footer {
     background-color: #2c3e50;
     color: white;
@@ -188,39 +183,12 @@ footer a {
     color: white;
 }
 
-/* Estilos para menú de hamburguesa en móviles */
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-.menu-toggle.active ~ nav {
-    display: block;
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    header nav {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        background-color: #f8f8f8;
-        padding-top: 1rem;
-    }
-
     header nav a {
         font-size: 1rem;
-        margin: 10px 0;
+        margin: 0 10px;
     }
-
+    
     .hero-section {
         height: 50vh;
     }
@@ -234,13 +202,13 @@ footer a {
         text-align: center;
     }
 
-    .text-content, .image-content img {
+    .text-content, .image-content {
         width: 100%;
-        max-width: none;
     }
 
     .collections-container .collection-item {
         width: 100%;
+        margin-bottom: 20px;
     }
 
     form input {
